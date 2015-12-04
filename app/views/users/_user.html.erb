@@ -1,0 +1,6 @@
+<li>
+  <%= link_to user.name, user %>
+  <% if current_user.admin? && !current_user?(user) %>
+    | <%= link_to "Supprimmer", user, method: :delete, data: { confirm: "Etes vous sur de vouloir cette tâche ?" } %>
+  <% end %>
+</li>

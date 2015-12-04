@@ -3,7 +3,7 @@
  * listed below.
  *
  * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
  *
  * You're free to add application-wide styles to this file and they'll appear at the bottom of the
  * compiled file so the styles you add here take precedence over styles defined in any styles
@@ -13,3 +13,357 @@
  *= require_tree .
  *= require_self
  */
+
+/* universal */
+
+html {
+  overflow-y: scroll;
+  height: 100%;
+}
+
+body {
+  padding-top: 60px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #777;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+a{
+  color: #046380;
+}
+
+.checkbox span{
+  margin-left: 15px;
+}
+
+a:hover{
+  text-decoration: none;
+  background-color: transparent;
+  color: #046380;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.btn-primary {
+  background-color: #999;
+  border-color: #777;
+}
+
+.btn-primary:hover {
+  background-color: #777;
+  border-color: #777;
+}
+
+#round{
+  display:inline-block;
+  line-height: 145px;
+  width: 150px;
+  height: 150px;
+  border: 5px solid #999; /*rgb(28, 64, 105);*/
+  border-radius: 50%;
+  margin: 10px;
+}
+
+#round-logo {
+  position: absolute;
+  margin-top: -10px;
+  margin-left: -50px;
+}
+
+#round-logo:hover {
+  text-decoration: none;
+  background-color: transparent;
+}
+
+/* header */
+
+.glyphicon{
+    background-image: url(glyphicons-halflings-white.png);
+}
+
+#logo {
+  position: absolute;
+  float: left;
+  margin-right: 10px;
+  margin-top: -30px;
+}
+
+#logo-titre {
+  float: left;
+  margin-right: 10px;
+  padding-left: 105px;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+}
+
+#logo-titre:hover {
+  text-decoration: none;
+  background-color: transparent;
+}
+
+#logo:hover {
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.navbar{
+  background-color: #046380;
+}
+
+.navbar a {
+  color: #fff;
+}
+
+.navbar ul li > a:focus,
+.navbar ul li > a:active,
+.navbar ul li > a:hover{
+  background-color: #4BB5C1;
+}
+
+.navbar .dropdown  ul{
+  background-color: #4BB5C1;
+}
+
+.navbar .dropdown  ul a{
+  color: #fff;
+}
+
+.navbar-nav > .open > a, 
+.navbar-nav > .open > a:hover, 
+.navbar-nav > .open > a:focus {
+  background-color: #046380;
+}
+
+/* dropdown sans javascript */
+
+.no-js .nav li {
+    position: relative;
+}
+
+.no-js .nav ul.dropdown-menu {
+    /*margin: 0;*/
+    display: block;
+    list-style: none;
+    white-space: nowrap;
+    position: absolute;
+    right: -9999px;
+}
+
+.no-js .nav li:hover ul.dropdown-menu {
+    right: 0;
+}
+
+.no-js .nav-collapse {
+    overflow: visible !important;
+    height: auto !important;
+}
+
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #fff;
+  background: transparent;
+}
+
+footer a {
+  color: #555;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 15px;
+}
+
+/* sidebar */
+
+aside {
+  section.user_info {
+    margin-top: 20px;
+  }
+  section {
+    padding: 10px 0;
+    margin-top: 20px;
+    &:first-child {
+      border: 0;
+      padding-top: 0;
+    }
+    span {
+      display: block;
+      margin-bottom: 3px;
+      line-height: 1;
+    }
+    h1 {
+      font-size: 1.4em;
+      text-align: left;
+      letter-spacing: -1px;
+      margin-bottom: 3px;
+      margin-top: 0px;
+    }
+  }
+}
+
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+input {
+  height: auto !important;
+}
+
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: red;
+  }
+}
+
+.checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
+}
+
+
+/* Users index */
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid #999;
+  }
+}
+
+/* products */
+
+.products {
+  list-style: none;
+  padding: 0;
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+  .user {
+    margin-top: 5em;
+    padding-top: 0;
+  }
+  .content {
+    display: block;
+    margin-left: 60px;
+    img {
+      display: block;
+      padding: 5px 0;
+    }
+  }
+  .timestamp {
+    color: #999;
+    display: block;
+    margin-left: 60px;
+  }
+}
+
+aside textarea {
+    height: 100px;
+    margin-bottom: 5px;
+}
+
+.pagination > li > a,
+.pagination > li > span{
+  color: #E7807B;
+}
+
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  background-color: #999;
+  border-color: #777;
+}
+

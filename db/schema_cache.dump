@@ -1,0 +1,37 @@
+U:2ActiveRecord::ConnectionAdapters::SchemaCache[
+l+o¾S{	I"schema_migrations:ET[o:4ActiveRecord::ConnectionAdapters::SQLite3Column:
+@nameI"version;T:@sql_typeI"varchar(255);T:
+@nullF:@limitiÿ:@precision0:@scale0:
+@type:string:@default0:@default_function0:@primary0:@coder0I"products;T[o;;I"id;T;	I"INTEGER;T;
+F;0;0;0;:integer;0;0;0;0o;;I"name_product;T;	I"varchar(255);T;
+T;iÿ;0;0;;;0;0;0;0o;;I"	date;T;	I"varchar(255);T;
+T;iÿ;0;0;;;0;0;0;0o;;I"user_id;T;	I"integer;T;
+T;0;0;0;;;0;0;0;0o;;I"created_at;T;	I"datetime;T;
+T;0;0;0;:datetime;0;0;0;0o;;I"updated_at;T;	I"datetime;T;
+T;0;0;0;;;0;0;0;0I"
+tasks;T[o;;I"id;T;	I"INTEGER;T;
+F;0;0;0;;;0;0;0;0o;;I"name_task;T;	I"varchar(255);T;
+T;iÿ;0;0;;;0;0;0;0o;;I"	date;T;	I"varchar(255);T;
+T;iÿ;0;0;;;0;0;0;0o;;I"user_id;T;	I"integer;T;
+T;0;0;0;;;0;0;0;0o;;I"created_at;T;	I"datetime;T;
+T;0;0;0;;;0;0;0;0o;;I"updated_at;T;	I"datetime;T;
+T;0;0;0;;;0;0;0;0I"
+users;T[o;;I"id;T;	I"INTEGER;T;
+F;0;0;0;;;0;0;0;0o;;I"	name;T;	I"varchar(255);T;
+T;iÿ;0;0;;;0;0;0;0o;;I"
+email;T;	I"varchar(255);T;
+T;iÿ;0;0;;;0;0;0;0o;;I"created_at;T;	I"datetime;T;
+F;0;0;0;;;0;0;0;0o;;I"updated_at;T;	I"datetime;T;
+F;0;0;0;;;0;0;0;0o;;I"password_digest;T;	I"varchar(255);T;
+T;iÿ;0;0;;;0;0;0;0o;;I"remember_digest;T;	I"varchar(255);T;
+T;iÿ;0;0;;;0;0;0;0o;;I"
+admin;T;	I"boolean;T;
+T;0;0;0;:boolean;F;0;0;0{	I"schema_migrations;T{I"version;T@I"products;T{I"id;T@I"name_product;T@I"	date;T@I"user_id;T@I"created_at;T@I"updated_at;T@I"
+tasks;T{I"id;T@$I"name_task;T@'I"	date;T@*I"user_id;T@-I"created_at;T@0I"updated_at;T@3I"
+users;T{I"id;T@8I"	name;T@;I"
+email;T@>I"created_at;T@AI"updated_at;T@DI"password_digest;T@GI"remember_digest;T@JI"
+admin;T@M{	I"schema_migrations;T0I"products;TI"id;TI"
+tasks;TI"id;TI"
+users;TI"id;T{	I"schema_migrations;TTI"products;TTI"
+tasks;TTI"
+users;TT

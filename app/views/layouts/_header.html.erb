@@ -1,0 +1,33 @@
+<header class="navbar">
+  <div class="container">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="glyphicon glyphicon-align-justify"></span>
+        
+    </button>
+    <%= link_to image_tag("", alt: "TOO DOOO"), root_path, id: "logo" %>
+    <%= link_to "TOO DOOO", root_path, id: "logo-titre" %>
+    <nav class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to "Accueil", root_path %></li>
+        <li><%= link_to "A propos", about_path %></li>
+        <% if logged_in? %>
+          
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Compte <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+             
+              <li><%= link_to "Options", edit_user_path(current_user) %></li>
+              <li class="divider"></li>
+              <li>
+                <%= link_to "Se deconnecter", logout_path, method: "get" %> <!-- method était delete-->
+              </li>
+            </ul>
+          </li>
+
+        <% else %>
+          <li><%= link_to "Se connecter", login_path %></li>
+        <% end %>
+      </ul>
+    </nav>
+  </div>
+</header>

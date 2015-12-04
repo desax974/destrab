@@ -1,0 +1,38 @@
+<% if logged_in? %>
+  <div class="row">
+    <aside class="col-md-4">
+      <section class="user_info">
+        <%= render 'shared/user_info' %>
+      </section>
+      <!--àsuprimmer>
+      <section class="tasks_form">
+        <%= render 'shared/task_form' %>
+      </section><-->
+    </aside>
+
+  </div>
+<% else %>
+<div class="center">
+  <h1>TOO DOOO</h1>
+
+  <h2>
+    "TOO DOOO" Ne remettez plus au lendemain ce que vous pouvez faire aujourd'hui !
+  </h2>
+      
+      <%= link_to(signup_path) do %>
+      <span class="btn btn-primary">
+        S'incrire !
+      </span>
+      <% end %>
+
+      <%= link_to(login_path) do %>
+      <span class="btn btn-primary">
+        Se connecter
+      </span>
+      <% end %>
+
+
+
+</div>
+
+<% end %>

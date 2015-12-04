@@ -1,0 +1,11 @@
+<li id="task-<%= task.id %>">
+  <span class="user"><%= link_to task.user.name, task.user %></span>
+  <span class="name"><%= task.name_task %></span>
+  <span class="date"><%= task.date %></span>
+  <span class="timestamp">
+    Ajouté le : <%=(task.created_at) %>
+    <% if current_user?(task.user) %>
+      <%= link_to "Supprimer", task, method: :delete, data: { confirm: "Etes vous sûr de vouloir supprimer ?" } %>
+    <% end %>
+  </span>
+</li>
